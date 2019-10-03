@@ -1,0 +1,280 @@
+/* VARIABLE CONTROL FOR CSS */
+/* ====================================================================================================== */
+:root {
+
+    /* FONTS                        Intended        Web-Safe            Style Backup       Description                          */
+    --arvo_font:                    'Arvo',         Courier,            monospace;      /* Menu section font                    */
+    --poppins_font:                 'Poppins',      Gadget,             sans-serif;     /* Used for titles (menu item title)    */
+    --lato_font:                    'Lato',         Verdana,            sans-serif;     /* Used for flavor text                 */
+    --teko_font:                    'Teko',         Charcoal,           sans-serif;     /* Used for logo                        */
+    
+    
+    /* COLORS */
+    --itemCard_price_color:         black;
+    --menu_background_color_alt:    rgb(245,245,245);
+    --primary:                      #6e853a;
+    --menu_hover_color:             rgb(225,225,225);
+    --menu_hover_color_alt:         rgb(225,225,225);
+    --menu_hover_text_color:        #f4623a;
+    --map_border_color:             rgb(81,103,41);
+
+}
+/* ====================================================================================================== */
+
+
+
+/* NAVBAR SECTION ======================================================================================= */
+.navbar .text {
+    font-family:                        var(--poppins_font) !important;
+    font-size:                          1em !important;
+    font-weight:                        700;
+    text-transform:                     uppercase;
+}
+
+.navbar .logo {
+    font-family:                        var(--teko_font) !important;
+    font-size:                          2em !important;
+    font-weight:                        normal !important;
+    text-transform:                     uppercase;
+}
+/* ====================================================================================================== */
+
+
+
+/* MASTHEAD SECTION ===================================================================================== */
+@media (max-width: 800px) {
+
+    .masthead .graphic {
+        width: 38vw !important;
+
+    }
+    .masthead .title {
+        font-size: 12vw !important;
+    }
+    .masthead .flavor {
+        /*font-size: 0.9em;*/
+    }
+}
+
+.masthead .overlay {
+    background-color:                   rgba(0,0,0,0.4);
+    width:                              100%;
+    height:                             100%;
+
+    display:                            flex;
+    flex-direction:                     column;
+    justify-content:                    center;
+}
+
+.masthead .title {
+    color:                              white;
+    font-family:                        var(--teko_font);
+    font-size:                          6em;
+}
+
+.masthead .graphic {
+    width:                              300px;
+}
+
+.masthead .flavor {
+    font-family:                        var(--lato_font);
+    font-weight:                        300;
+}
+/* ====================================================================================================== */
+
+
+
+/* ABOUT SECTION ======================================================================================== */
+.about {
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.about .imageHolder {
+    margin: auto;    
+    display: block;
+}
+
+.about .imageHolder .image {
+    width: 320px;   
+    border: solid;
+    border-width: 5px;
+    border-color: var(--map_border_color);
+}
+
+@media (max-width: 800px) {
+    .about .imageHolder .image {
+        width: 300px;   
+    }
+}
+
+.about .title {
+    font-family:                        var(--poppins_font);
+}
+
+.about .flavor {
+    font-family:                        var(--lato_font);
+    font-weight:                        300;
+}
+
+.about .flair {
+    font-family: var(--arvo_font);
+}
+/* ====================================================================================================== */
+
+
+
+/* MENU SECTION ========================================================================================= */
+body .category {
+    padding-left:                       12vw;
+    padding-right:                      12vw;
+    padding-top:                        30px;
+    padding-bottom:                     20px;
+    
+    color:                              var(--primary);
+}
+
+body .category:hover {
+    cursor:                             pointer;
+    color:                              var(--menu_hover_text_color);
+}
+
+body .category.altColor {
+    background-color:                   var(--menu_background_color_alt);
+}
+
+body .category .head {
+    font-family:                        var(--arvo_font) !important;
+    font-size:                          24px;
+    font-weight:                        500;
+    text-transform:                     uppercase;
+    text-align:                         center;
+
+
+    border-bottom:                      solid;
+    border-width:                       1px;
+    border-color:                       var(--card_title_unselected_color);
+    
+    margin-bottom:                      20px;
+    
+    color:                              inherit;
+    transition: color 0.2s linear;
+}
+
+body .category .cardGrid {
+    display:                            grid;
+    grid-gap:                           16px;
+    grid-template-columns:              repeat(auto-fit,minmax(320px, 1fr)); /* COULD USE AUTO-FILL or AUTO-FIT instead of 2 */
+    margin:                             auto;
+    margin-left:                        5vw;
+    
+    color:                              black;
+}
+
+@media (max-width: 375px) {
+    body .category .cardGrid {
+        margin-left:                    0vw !important;
+    }
+}
+
+@media (max-width: 800px) {
+    body .category .cardGrid .itemCard {
+        margin-bottom:                  3.5vw !important;
+    }
+}
+
+body .category .cardGrid .itemCard {
+    margin-bottom:                      35px;
+    text-align:                         left;
+}
+
+body .category .cardGrid .itemCard .title {
+    font-family:                        var(--poppins_font) !important;
+    font-size:                          0.9em;
+    font-weight:                        700;
+    text-transform:                     uppercase;
+    text-align:                         center;
+    margin-bottom:                      6px;
+}
+
+body .category .cardGrid .itemCard .price {
+    font-family:                        var(--lato_font) !important;
+    font-size:                          0.8em;
+    font-weight:                        100;
+    font-style:                         italic;
+    color:                              var(--itemCard_price_color);
+    display:                            inline;
+}
+
+body .category .cardGrid .itemCard .subtext {
+    max-width:                          300px;
+}
+
+body .category .cardGrid .itemCard .subtext .text1 {
+    font-family:                        var(--lato_font) !important;
+    font-size:                          0.85em;
+    font-weight:                        300;
+    text-transform:                     capitalize;
+    word-spacing:                       1;
+}
+
+body .category .cardGrid .itemCard .subtext .text2 {
+    font-family:                        var(--lato_font) !important;
+    font-size:                          0.8em;
+    font-weight:                        300;
+    font-style:                         italic;
+    color:                              var(--itemCard_price_color);
+    text-transform:                     lowercase;
+    margin-top:                         4px;
+}
+/* ====================================================================================================== */
+
+
+
+/* ORDER ONLINE SECTION ================================================================================= */
+.orderOnline {
+    padding-top:                        40px;
+    padding-bottom:                     50px;
+}
+
+.orderOnline .title {
+    font-family:                        var(--poppins_font);
+}
+
+.orderOnline .flavor {
+    font-family:                        var(--lato_font);
+    font-weight:                        300;
+}
+
+.orderOnline .flair {
+    font-family:                        var(--arvo_font);
+    font-weight:                        300;
+}
+/* ====================================================================================================== */
+
+
+
+/* FOOTER =============================================================================================== */
+.foot {
+    background-color:                   black !important;
+    padding-top:                        30px;
+    padding-bottom:                     40px;
+}
+
+.foot .logoText {
+    font-family:                        var(--teko_font);
+    font-size:                          1.5em;
+    color:                              var(--primary);
+}
+
+.foot .text1 {
+    font-family:                        var(--arvo_font);
+    color:                              gray !important;
+}
+
+.foot .copyright {
+    font-family:                        var(--lato_font);
+    font-weight:                        300;
+    color:                              rgb(100,100,100) !important;
+}
+/* ====================================================================================================== */
