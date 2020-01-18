@@ -230,6 +230,27 @@
         <!-- Custom scripts for this template -->
         <script src="js/creative.js"></script>
         <script type="text/javascript" src="js/loadMenuCSV.js"></script>
+        
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
 
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+https://firebase.google.com/docs/web/setup#available-libraries -->
+
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyApHqiajYXzopOtkdCSjUctd7oVPsm_lJY",
+                authDomain: "greene-hook-redesign.firebaseapp.com",
+                databaseURL: "https://greene-hook-redesign.firebaseio.com",
+                projectId: "greene-hook-redesign",
+                storageBucket: "greene-hook-redesign.appspot.com",
+                messagingSenderId: "751908303418",
+                appId: "1:751908303418:web:88b34f78343f4893627b03"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+        </script>
+        
     </body>
 </html>
